@@ -160,7 +160,7 @@ export default function InvitationScreen() {
         </motion.div>
 
         {/* EVENT DETAILS */}
-        <motion.div variants={itemVariants} className="w-full flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 py-5 border-y border-[var(--color-sbu-accent-1)] border-opacity-20 max-w-5xl my-6 bg-[rgba(15,23,42,0.3)] backdrop-blur-sm rounded-lg">
+        <motion.div variants={itemVariants} className="w-full flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 py-5 border-y border-[var(--color-sbu-accent-1)] border-opacity-20 max-w-5xl my-6 bg-[rgba(20,20,20,0.4)] backdrop-blur-sm rounded-lg">
           <div className="flex flex-col items-center md:items-end text-center md:text-right flex-1">
             <p className="text-[10px] tracking-[0.3em] text-[var(--color-sbu-accent-2)] uppercase opacity-80 mb-1 font-mono">Date</p>
             <p className="text-base md:text-lg font-display font-medium tracking-widest text-white uppercase">{EVENT_CONFIG.event.date}</p>
