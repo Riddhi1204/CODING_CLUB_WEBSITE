@@ -200,7 +200,7 @@ export default function InvitationScreen() {
             {EVENT_CONFIG.club.name} | {EVENT_CONFIG.university.name}
           </p>
           <p className="text-[9px] text-white font-mono opacity-60 mt-1">
-            Built by SBU Coding Club
+            Built by Riddhi(SBU2500374)
           </p>
           <p className="text-[8px] text-white font-mono opacity-40 mt-1">
             &copy; 2026 {EVENT_CONFIG.club.name}. All rights reserved.
