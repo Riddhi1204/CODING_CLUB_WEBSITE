@@ -1,26 +1,131 @@
 @import "tailwindcss";
 
+@theme {
+  --color-sbu-bg: #05020a; /* Deep ultraviolet black */
+  --color-sbu-card: rgba(20, 10, 30, 0.4);
+  --color-sbu-accent-1: #d946ef; /* Vibrant Fuchsia */
+  --color-sbu-accent-2: #8b5cf6; /* Vivid Purple */
+  --color-sbu-accent-3: #fb923c; /* Warm Orange highlight */
+  --color-sbu-text: #faf5ff;
+  
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-sans: "Inter", "Helvetica", "Arial", sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: var(--color-sbu-bg);
+  --foreground: var(--color-sbu-text);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  background-image: 
+    radial-gradient(ellipse at 15% 10%, rgba(217, 70, 239, 0.15) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 85%, rgba(139, 92, 246, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(10, 5, 20, 1) 0%, var(--color-sbu-bg) 100%);
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Modern tech grid background */
+.bg-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Subtle floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+/* Gradient Text for accents */
+.text-gradient {
+  background: linear-gradient(to right, var(--color-sbu-accent-1), var(--color-sbu-accent-3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Shiny Glassmorphism for Event Title */
+.glass-text {
+  font-family: var(--font-display);
+  background: linear-gradient(
+    135deg, 
+    #ffffff 0%, 
+    var(--color-sbu-accent-1) 30%, 
+    var(--color-sbu-accent-3) 70%, 
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine 3s linear infinite;
+  text-shadow: 0 0 30px rgba(217, 70, 239, 0.4);
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Shiny Border for Dignitary Cards */
+.shiny-border-card {
+  position: relative;
+  background: var(--color-sbu-card);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.shiny-border-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--color-sbu-accent-1), rgba(139, 92, 246, 0.1), var(--color-sbu-accent-3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Add a subtle internal glow for the cards */
+.shiny-border-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(217, 70, 239, 0.15), transparent 70%);
+  pointer-events: none;
+  z-index: 1;
 }
