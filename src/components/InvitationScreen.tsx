@@ -194,12 +194,15 @@ export default function InvitationScreen() {
         </motion.div>
         
         {/* FOOTER */}
-        <motion.footer variants={fadeVariants} className="mt-auto w-full text-center pb-4 opacity-40 flex flex-col items-center gap-2">
-          <div className="h-[1px] w-32 bg-gradient-to-r from-transparent via-[var(--color-sbu-accent-1)] to-transparent opacity-30 mb-2" />
+        <motion.footer variants={fadeVariants} className="mt-auto w-full text-center pb-6 opacity-50 flex flex-col items-center gap-2">
+          <div className="h-[1px] w-40 bg-gradient-to-r from-transparent via-[var(--color-sbu-accent-1)] to-transparent opacity-30 mb-3" />
           <p className="text-[9px] md:text-[10px] tracking-widest text-white uppercase font-sans">
             {EVENT_CONFIG.club.name} | {EVENT_CONFIG.university.name}
           </p>
-          <p className="text-[9px] text-white font-mono opacity-50">
+          <p className="text-[9px] text-white font-mono opacity-60 mt-1">
+            Built by SBU Coding Club
+          </p>
+          <p className="text-[8px] text-white font-mono opacity-40 mt-1">
             &copy; 2026 {EVENT_CONFIG.club.name}. All rights reserved.
           </p>
         </motion.footer>
