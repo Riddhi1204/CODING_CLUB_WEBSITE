@@ -10,7 +10,7 @@ export const EVENT_CONFIG = {
     name: "CODE QUEST 2026",
     invitationLine: "CORDIALLY INVITES YOU TO THE INAUGURATION OF",
     date: "21 SEPTEMBER 2026",
-    time: "09:00 AM ONWARDS",
+    time: "10:00 AM ONWARDS",
     venue: "UNIVERSITY COMPUTER LAB\nAI-ML LAB / A2-304", // Can be split by newline
     welcomeMessage:
       "An initiative by the SBU Coding Club to foster logical thinking, problem-solving, programming skills, and a spirit of healthy competition among students.",
