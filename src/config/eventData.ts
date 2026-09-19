@@ -11,7 +11,7 @@ export const EVENT_CONFIG = {
     invitationLine: "CORDIALLY INVITES YOU TO THE INAUGURATION OF",
     date: "21 SEPTEMBER 2026",
     time: "10:00 AM ONWARDS",
-    venue: "UNIVERSITY COMPUTER LAB\nAI-ML LAB / A2-304", // Can be split by newline
+    venue: "AI-ML LAB / A2-304", // Can be split by newline
     welcomeMessage:
       "An initiative by the SBU Coding Club to foster logical thinking, problem-solving, programming skills, and a spirit of healthy competition among students.",
   },
@@ -36,17 +36,17 @@ export const EVENT_CONFIG = {
     deans: [
       {
         designation: "Respected Dean, Students Welfare",
-        name: "Prof. Biswarup Samanta Sir",
+        name: "Dr. Biswarup Samanta Sir",
       },
       {
         designation: "Respected Dean, CS & Engineering",
-        name: "Prof. Pankaj Goswami Sir",
+        name: "Dr. Pankaj Goswami Sir",
       },
     ],
     hod: [
       {
         designation: "Respected HoD",
-        name: "Prof. Priyanka Srivastava Madam",
+        name: "Dr. Priyanka Srivastava Madam",
       },
     ],
     others: "and other dignitaries",
